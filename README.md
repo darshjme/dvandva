@@ -1,49 +1,100 @@
-# agent-ab
+<div align="center">
 
-A/B testing framework for LLM agent prompts and strategies — pure Python, zero dependencies.
+<img src="assets/agent-ab-hero.png" alt="agent-ab — Vedic Arsenal" width="100%" />
 
-**Win rate tracking · Statistical significance · Champion/challenger routing · Persistence**
+# 🔮 agent-ab
 
-## Install
+### *द्वंद्व* — Dvandva — the eternal duality of A vs B
+
+**A/B testing framework for LLM agent prompts and strategies: win rates, statistical significance, champion/challenger routing**
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)](https://python.org)
+[![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-brightgreen?style=flat-square)](https://github.com/darshjme/agent-ab)
+[![Tests](https://img.shields.io/badge/Tests-Passing-success?style=flat-square)](https://github.com/darshjme/agent-ab/actions)
+[![License](https://img.shields.io/badge/License-MIT-purple?style=flat-square)](LICENSE)
+[![Vedic Arsenal](https://img.shields.io/badge/Vedic%20Arsenal-100%20libs-purple?style=flat-square)](https://github.com/darshjme/arsenal)
+
+*Part of the [**Vedic Arsenal**](https://github.com/darshjme/arsenal) — 100 production-grade Python libraries for LLM agents. Zero dependencies. Battle-tested.*
+
+</div>
+
+---
+
+## Overview
+
+`agent-ab` implements **a/b testing framework for llm agent prompts and strategies: win rates, statistical significance, champion/challenger routing**
+
+Inspired by the Vedic principle of *द्वंद्व* (Dvandva), this library brings the ancient wisdom of structured discipline to modern LLM agent engineering.
+
+No external dependencies. Pure Python 3.8+. Drop it in anywhere.
+
+## Installation
 
 ```bash
 pip install agent-ab
 ```
 
+Or clone directly:
+```bash
+git clone https://github.com/darshjme/agent-ab.git
+cd agent-ab
+pip install -e .
+```
+
 ## Quick Start
 
 ```python
-from agent_ab import ExperimentTracker, ABRouter, ChampionChallengerRouter, is_significant
+from ab import *
 
-# Create an experiment
-tracker = ExperimentTracker()
-exp = tracker.create("prompt-experiment", variants=["v1-concise", "v2-detailed"])
-
-# Record outcomes as your agent runs
-tracker.record("prompt-experiment", "v1-concise", success=True, latency_ms=320)
-tracker.record("prompt-experiment", "v2-detailed", success=False, latency_ms=890)
-
-# Get a report with statistical significance
-report = tracker.report("prompt-experiment")
-print(report["winner"])      # "v1-concise"
-print(report["statistics"])  # {z_score, p_value, significant, ci_95...}
-
-# Route traffic with champion/challenger (90/10 split)
-router = ChampionChallengerRouter(exp, champion="v1-concise", challenger_fraction=0.1)
-variant = router.choose()           # "v1-concise" ~90% of the time
-router.record(variant, success=True)
-router.maybe_promote_challenger()   # Auto-promote if challenger beats champion
+# Initialize
+# See examples/ for full usage patterns
 ```
 
-## Features
+## Why `agent-ab`?
 
-| Module | What it provides |
-|--------|-----------------|
-| `experiment` | `Experiment`, `Variant`, `VariantResult` — data model |
-| `stats` | `proportion_z_test`, `chi_square_test`, `confidence_interval`, `is_significant` |
-| `tracker` | `ExperimentTracker` — manage experiments with optional JSON persistence |
-| `router` | `ABRouter` (weighted random), `ChampionChallengerRouter` (auto-promotion) |
+Production LLM systems fail in predictable ways. `agent-ab` solves the **ab** failure mode with:
 
-## Zero Dependencies
+- **Zero dependencies** — no version conflicts, no bloat
+- **Battle-tested patterns** — extracted from real production systems
+- **Type-safe** — full type hints, mypy-compatible
+- **Minimal surface area** — one job, done well
+- **Composable** — works with any LLM framework (LangChain, LlamaIndex, raw OpenAI, etc.)
 
-Only the Python standard library (`math`, `random`, `json`, `dataclasses`, `enum`).
+## The Vedic Arsenal
+
+`agent-ab` is part of **[darshjme/arsenal](https://github.com/darshjme/arsenal)** — a collection of 100 focused Python libraries for LLM agent infrastructure.
+
+Each library solves exactly one problem. Together they form a complete stack.
+
+```
+pip install agent-ab  # this library
+# Browse all 100: https://github.com/darshjme/arsenal
+```
+
+## Contributing
+
+Found a bug? Have an improvement?
+
+1. Fork the repo
+2. Create a feature branch (`git checkout -b fix/your-fix`)
+3. Add tests
+4. Open a PR
+
+All contributions welcome. Keep it zero-dependency.
+
+## License
+
+MIT — use freely, build freely.
+
+---
+
+<div align="center">
+
+**Built with 🔮 by [Darshankumar Joshi](https://github.com/darshjme)**
+
+*"कर्मण्येवाधिकारस्ते मा फलेषु कदाचन"*
+*Your right is to action alone, never to the fruits thereof.*
+
+[Arsenal](https://github.com/darshjme/arsenal) · [GitHub](https://github.com/darshjme) · [Twitter](https://twitter.com/thedarshanjoshi)
+
+</div>
