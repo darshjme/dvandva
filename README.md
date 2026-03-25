@@ -1,20 +1,22 @@
 <div align="center">
 
-<img src="assets/dvandva-hero.png" width="100%" alt="dvandva hero banner" />
+<img src="assets/dvandva-hero.png" alt="द्वंद्व — dvandva by Darshankumar Joshi" width="100%" />
 
-# द्वंद्व
-## dvandva
+# 🪷 द्वंद्व
+## `dvandva`
 
 > *Bhagavad Gita 7.27*
 
-**Duality — the eternal pairs of opposites**
+### Duality — the eternal pairs of opposites
 
-_A/B testing framework for LLM agent prompts and models. Split traffic, collect metrics, compare._
+**A/B testing framework for LLM agent prompts and models. Split traffic, collect metrics, compare.**
 
-[![Python](https://img.shields.io/badge/Python-3.9+-DB2777.svg?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![License](https://img.shields.io/badge/License-MIT-DB2777.svg?style=flat-square)](LICENSE)
-[![Part of Arsenal](https://img.shields.io/badge/Part%20of-Vedic%20Arsenal-DB2777.svg?style=flat-square)](https://github.com/darshjme/arsenal)
-[![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-DB2777.svg?style=flat-square)](pyproject.toml)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)](https://python.org)
+[![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-brightgreen?style=flat-square)](https://github.com/darshjme/dvandva)
+[![Vedic Arsenal](https://img.shields.io/badge/Vedic%20Arsenal-100%20libs-pink?style=flat-square)](https://github.com/darshjme/arsenal)
+[![License](https://img.shields.io/badge/License-MIT-pink?style=flat-square)](LICENSE)
+
+*Formerly `agent-ab` — Part of the [**Vedic Arsenal**](https://github.com/darshjme/arsenal): 100 production-grade Python libraries for LLM agents, each named from the Vedas, Puranas, and Mahakavyas.*
 
 </div>
 
@@ -22,96 +24,80 @@ _A/B testing framework for LLM agent prompts and models. Split traffic, collect 
 
 ## The Vedic Principle
 
-द्वंद्व — Duality, the eternal law of opposites — is written into the fabric of existence itself. The Bhagavad Gita speaks of dvandvas: heat and cold, pleasure and pain, victory and defeat. Without opposition, there is no growth; without contrast, there is no measurement; without duality, there is no truth.
+The ancient *Dvandva* principle from Bhagavad Gita 7.27 finds its modern expression in this library.
 
-In LLM engineering, dvandva manifests as the A/B test — the sacred comparison that reveals which prompt, which model, which strategy truly serves your users. Just as Arjuna could not choose his path without understanding both dharma and adharma, your AI systems cannot optimize without data-driven duality. Every experiment is a Kurukshetra: two approaches meet, and only truth emerges victorious.
+Just as the Vedic sages understood that every phenomenon in the universe follows deep patterns — patterns of creation, maintenance, and dissolution — `dvandva` applies this wisdom to LLM agent engineering.
 
-dvandva brings rigorous statistical methodology to your agent experiments. Split traffic with precision, collect metrics across every dimension, and let the data — not intuition — guide your dharmic path to optimization.
+The concept of *द्वंद्व* (Duality — the eternal pairs of opposites) speaks directly to the technical problem this library solves. When the sages codified this principle in Bhagavad Gita 7.27, they were describing not just a spiritual truth but a computational truth that would take humanity millennia to rediscover in silicon.
+
+This is not coincidence. The universe has one nature. The Vedas described it first.
 
 ---
 
 ## How It Works
 
 ```mermaid
-flowchart TD
-    A[Input] --> B[Process]
-    B --> C{Valid?}
-    C -->|Yes| D[✅ Output]
-    C -->|No| E[🔄 Handle]
+flowchart LR
+    A[Input] --> B[dvandva]
+    B --> C{Process}
+    C -- Success --> D[Output]
+    C -- Error --> E[Handle]
     E --> B
+    style B fill:#6b21a8,color:#fff
 ```
-
----
-
-## Quick Start
-
-```bash
-pip install dvandva
-```
-
-```python
-from dvandva import *
-
-# Initialize
-agent = Dvandva()
-
-# Use
-result = agent.process(your_input)
-print(result)
-```
-
----
-
-## Features
-
-- ⚡ **Zero dependencies** — pure Python, no bloat
-- 🛡️ **Production-grade** — battle-tested patterns
-- 🔧 **Configurable** — sane defaults, full control
-- 📊 **Observable** — built-in metrics and logging
-- 🔄 **Async-ready** — full asyncio support
-- 🧪 **Tested** — comprehensive test coverage
 
 ---
 
 ## Installation
 
 ```bash
-# pip
 pip install dvandva
+```
 
-# From source
-git clone https://github.com/darshjme/dvandva
-cd dvandva
-pip install -e .
+Or from source:
+```bash
+git clone https://github.com/darshjme/dvandva.git
+cd dvandva && pip install -e .
+```
+
+## Quick Start
+
+```python
+from dvandva import *
+
+# See examples/ for full usage
 ```
 
 ---
 
-## Part of the Vedic Arsenal
+## The Vedic Arsenal
 
-`dvandva` is part of the **[Vedic Arsenal](https://github.com/darshjme/arsenal)** — 100 production-grade Python libraries for LLM agents, named after Sanskrit concepts from the Upanishads, Mahabharata, Ramayana, and Vedic philosophy.
+`dvandva` is one of 100 libraries in **[darshjme/arsenal](https://github.com/darshjme/arsenal)** — each named from sacred Indian literature:
 
-Each library is:
-- ✅ Zero-dependency
-- ✅ Production-ready
-- ✅ Individually installable
-- ✅ Part of a coherent ecosystem
+| Sanskrit Name | Source | Technical Function |
+|---|---|---|
+| `dvandva` | Bhagavad Gita 7.27 | Duality — the eternal pairs of opposites |
+
+Each library solves one problem. Zero external dependencies. Pure Python 3.8+.
 
 ---
 
-## Built by [Darshankumar Joshi](https://github.com/darshjme)
+## Contributing
 
-> *"Building the dharmic infrastructure for the AI age"*
-
-[![GitHub](https://img.shields.io/badge/GitHub-darshjme-DB2777.svg?style=flat-square&logo=github)](https://github.com/darshjme)
-[![Arsenal](https://img.shields.io/badge/Vedic%20Arsenal-100%20Libraries-DB2777.svg?style=flat-square)](https://github.com/darshjme/arsenal)
+1. Fork the repo
+2. Create feature branch (`git checkout -b fix/your-fix`)  
+3. Add tests — zero dependencies only
+4. Open a PR
 
 ---
 
 <div align="center">
 
-*द्वंद्व — Duality — the eternal pairs of opposites*
+**🪷 Built by [Darshankumar Joshi](https://github.com/darshjme)** · [@thedarshanjoshi](https://twitter.com/thedarshanjoshi)
 
-*From the Bhagavad Gita 7.27*
+*"कर्मण्येवाधिकारस्ते मा फलेषु कदाचन"*
+*Your right is to action alone, never to its fruits. — Bhagavad Gita 2.47*
+
+[Vedic Arsenal](https://github.com/darshjme/arsenal) · [GitHub](https://github.com/darshjme) · [Twitter](https://twitter.com/thedarshanjoshi)
 
 </div>
